@@ -1,4 +1,4 @@
-# write-excel-file-data-validation
+# @onparallel/write-excel-file-data-validation
 
 Data validation custom feature for [`write-excel-file`](https://www.npmjs.com/package/write-excel-file).
 
@@ -7,10 +7,10 @@ Adds support for Excel's "data validation" rules — dropdown lists, numeric/dat
 ## Install
 
 ```sh
-npm install write-excel-file write-excel-file-data-validation
+npm install write-excel-file @onparallel/write-excel-file-data-validation
 ```
 
-`write-excel-file` is a peer dependency (`^4.0.0`).
+`write-excel-file` is a peer dependency (`^4.0.0`). The package is published publicly under the `@onparallel` scope — no authentication required to install.
 
 ## Usage
 
@@ -18,7 +18,9 @@ Register the feature when calling `writeXlsxFile()`. `write-excel-file/node`'s b
 
 ```ts
 import writeXlsxFile, { type SheetOptions } from 'write-excel-file/node'
-import dataValidation, { type DataValidationSheetOptions } from 'write-excel-file-data-validation'
+import dataValidation, {
+	type DataValidationSheetOptions
+} from '@onparallel/write-excel-file-data-validation'
 
 const sheetOptions: SheetOptions<any> & DataValidationSheetOptions = {
 	sheet: 'Sheet1',
