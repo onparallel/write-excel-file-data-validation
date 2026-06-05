@@ -39,6 +39,7 @@
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
 		"examples": "for f in examples/*.ts; do tsx \"$f\"; done",
+		"examples:check": "bash scripts/check-examples-content.sh",
 		"prepublishOnly": "npm run format:check && npm run typecheck && npm test && npm run build"
 	},
 	"keywords": [
