@@ -17,29 +17,29 @@ npm install write-excel-file @onparallel/write-excel-file-data-validation
 Register the feature when calling `writeXlsxFile()`. `write-excel-file/node`'s built-in `SheetOptions` does not know about `dataValidation`, so intersect it with the `DataValidationSheetOptions` type exported by this package:
 
 ```ts
-import writeXlsxFile, { type SheetOptions } from 'write-excel-file/node'
+import writeXlsxFile, { type SheetOptions } from "write-excel-file/node";
 import dataValidation, {
-	type DataValidationSheetOptions
-} from '@onparallel/write-excel-file-data-validation'
+  type DataValidationSheetOptions,
+} from "@onparallel/write-excel-file-data-validation";
 
 const sheetOptions: SheetOptions<any> & DataValidationSheetOptions = {
-	sheet: 'Sheet1',
-	dataValidation: [
-		{
-			cellRange: {
-				from: { row: 2, column: 1 },
-				to: { row: 10, column: 1 }
-			},
-			validation: {
-				type: 'list',
-				values: ['open', 'closed', 'pending'],
-				error: 'Pick one'
-			}
-		}
-	]
-}
+  sheet: "Sheet1",
+  dataValidation: [
+    {
+      cellRange: {
+        from: { row: 2, column: 1 },
+        to: { row: 10, column: 1 },
+      },
+      validation: {
+        type: "list",
+        values: ["open", "closed", "pending"],
+        error: "Pick one",
+      },
+    },
+  ],
+};
 
-await writeXlsxFile(data, sheetOptions, { features: [dataValidation] }).toFile('out.xlsx')
+await writeXlsxFile(data, sheetOptions, { features: [dataValidation] }).toFile("out.xlsx");
 ```
 
 If you use the intersection in many places, alias it locally: `type MySheetOptions = SheetOptions<any> & DataValidationSheetOptions`.
