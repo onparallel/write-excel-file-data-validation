@@ -3,11 +3,11 @@ import {
   getOrderOfSiblings,
   sanitizeAttributeValue,
   sanitizeTextContent,
+  getCellAddress,
+  convertDateToSerialNumber,
 } from "write-excel-file/utility";
 import type { Feature } from "write-excel-file/node";
 
-import getCellCoordinate from "./getCellCoordinate.js";
-import convertDateToExcelSerial from "./convertDateToExcelSerial.js";
 import type {
   DataValidation,
   DataValidationOperator,
@@ -96,9 +96,7 @@ function getDataValidationXml(rule: DataValidationRule): string {
   }
 
   const sqref =
-    getCellCoordinate(from.row - 1, from.column - 1) +
-    ":" +
-    getCellCoordinate(to.row - 1, to.column - 1);
+    getCellAddress(from.row - 1, from.column - 1) + ":" + getCellAddress(to.row - 1, to.column - 1);
 
   const attributes: string[] = [];
 
@@ -357,7 +355,7 @@ function formatNumericValue(value: number, type: string): string {
 function formatDateOrTimeValue(value: Date | number, type: "date" | "time"): string {
   let serial: number;
   if (value instanceof Date) {
-    serial = convertDateToExcelSerial(value);
+    serial = convertDateToSerialNumber(value);
   } else if (typeof value === "number") {
     serial = value;
   } else {
