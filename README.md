@@ -12,6 +12,8 @@ npm install write-excel-file @onparallel/write-excel-file-data-validation
 
 `write-excel-file` is a peer dependency (`^4.0.0`). The package is published publicly under the `@onparallel` scope — no authentication required to install.
 
+The package is ESM. You can load it with `import` or, on Node.js 22.12 or later, with `require()` from CommonJS.
+
 ## Usage
 
 Register the feature when calling `writeXlsxFile()`. `write-excel-file/node`'s built-in `SheetOptions` does not know about `dataValidation`, so intersect it with the `DataValidationSheetOptions` type exported by this package:
