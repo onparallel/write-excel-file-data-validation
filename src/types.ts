@@ -3,8 +3,7 @@ export type DataValidationOperatorOnOneValue = "<" | "<=" | ">" | ">=" | "=" | "
 export type DataValidationOperatorOnTwoValues = "..." | "!...";
 
 export type DataValidationOperator =
-  | DataValidationOperatorOnOneValue
-  | DataValidationOperatorOnTwoValues;
+  DataValidationOperatorOnOneValue | DataValidationOperatorOnTwoValues;
 
 export type DataValidationErrorStyle = "stop" | "warning" | "information";
 
