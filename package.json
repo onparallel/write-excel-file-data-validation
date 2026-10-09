@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/onparallel/write-excel-file-data-validation#readme",
   "engines": {
-    "node": ">=22.12"
+    "node": ">=22"
   },
   "sideEffects": false,
   "scripts": {
