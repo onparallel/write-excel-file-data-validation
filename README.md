@@ -105,9 +105,9 @@ Maximum lengths enforced (Excel limits): titles ≤ 32 characters, messages ≤ 
 The [`examples/`](./examples) folder contains runnable TypeScript scripts — one per validation type — that emit `.xlsx` files next to themselves. Open the generated files in Excel/Numbers/LibreOffice to confirm each rule works.
 
 ```sh
-npm install
-npx tsx examples/list-inline.ts          # run a single example
-npm run examples                          # run them all
+pnpm install
+pnpm exec tsx examples/list-inline.ts # run a single example
+pnpm run examples                     # run them all
 ```
 
 See [`examples/README.md`](./examples/README.md) for the full list.
@@ -115,10 +115,10 @@ See [`examples/README.md`](./examples/README.md) for the full list.
 ## Development
 
 ```sh
-npm install
-npm test          # vitest
-npm run typecheck # tsc --noEmit
-npm run build     # emit dist/ via tsc
+pnpm install
+pnpm test          # vitest
+pnpm run typecheck # tsc --noEmit
+pnpm run build     # emit dist/ via tsc
 ```
 
 ## License
