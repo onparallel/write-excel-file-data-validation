@@ -1,6 +1,6 @@
 {
   "name": "@onparallel/write-excel-file-data-validation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Data validation custom feature for write-excel-file",
   "type": "module",
   "main": "./dist/index.js",
