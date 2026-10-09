@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/onparallel/write-excel-file-data-validation/compare/v1.0.1...v1.0.2) (2026-10-09)
+
+
+### Bug Fixes
+
+* accept every Node.js 22 version in "engines" again ([4aa6cf8](https://github.com/onparallel/write-excel-file-data-validation/commit/4aa6cf860ef90c0766b86a4b0eb2a0ee2a40a6ba))
+
 ## [1.0.1](https://github.com/onparallel/write-excel-file-data-validation/compare/v1.0.0...v1.0.1) (2026-10-09)
 
 
