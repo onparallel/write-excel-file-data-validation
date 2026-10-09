@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/onparallel/write-excel-file-data-validation/compare/v1.0.0...v1.0.1) (2026-10-09)
+
+
+### Bug Fixes
+
+* allow require() from CommonJS ([9f0fe3b](https://github.com/onparallel/write-excel-file-data-validation/commit/9f0fe3b1baaeea9e888198379615f5b5f855e004)), closes [#20](https://github.com/onparallel/write-excel-file-data-validation/issues/20)
+
 ## [1.0.0](https://github.com/onparallel/write-excel-file-data-validation/compare/v0.1.0...v1.0.0) (2026-06-08)
 
 
